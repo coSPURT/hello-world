@@ -9,7 +9,7 @@ var ciphertextBytes = CryptoJS.enc.Base64.parse(ciphertextBase64);
 
 var decrypted = CryptoJS.AES.decrypt(
     { ciphertext: ciphertextBytes },
-    keyBytes,
+    keyBytes,  
     { iv: ivBytes, mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 }
 );
 
